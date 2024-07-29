@@ -25,3 +25,9 @@ nbproject/
 
 # MacOSX noise
 .DS_Store
+
+#maven release plugin
+pom.xml.next
+pom.xml.releaseBackup
+pom.xml.tag
+release.properties

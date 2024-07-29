@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.quartz-scheduler</groupId>
     <artifactId>quartz-parent</artifactId>
-    <version>2.3.2-SNAPSHOT</version>
+    <version>2.3.3-SNAPSHOT</version>
   </parent>
 
   <groupId>org.quartz-scheduler.internal</groupId>
@@ -14,9 +14,8 @@
   <packaging>jar</packaging>
 
   <properties>
-    <terracotta-snapshots-url>http://nexus.terracotta.eur.ad.sag/content/repositories/terracotta-snapshots</terracotta-snapshots-url>
-    <terracotta-staging-url>http://nexus.terracotta.eur.ad.sag/content/repositories/terracotta-staging</terracotta-staging-url>
-    <terracotta-releases-url>http://nexus.terracotta.eur.ad.sag/content/repositories/terracotta-releases</terracotta-releases-url>      
+    <terracotta-snapshots-url>https://maven.pkg.github.com/amergey/quartz</terracotta-snapshots-url>
+    <terracotta-releases-url>https://maven.pkg.github.com/amergey/quartz</terracotta-releases-url>      
   </properties>
 
   <profiles>
@@ -39,11 +38,6 @@
   </profiles>
   
   <distributionManagement>
-    <repository>
-      <id>terracotta-staging</id>
-      <name>Terracotta Staging Repository</name>
-      <url>${terracotta-staging-url}</url>
-    </repository>
     <snapshotRepository>
       <id>terracotta-snapshots</id>
       <uniqueVersion>false</uniqueVersion>

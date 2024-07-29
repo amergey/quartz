@@ -24,14 +24,14 @@
     </license>
   </licenses>  
   <scm>
-    <connection>scm:git:git@github.com:quartz-scheduler/quartz.git</connection>
-    <developerConnection>scm:git:git@github.com:quartz-scheduler/quartz.git</developerConnection>
-    <tag />
-    <url>https://github.com/quartz-scheduler/quartz</url>
+    <connection>scm:git:git@github.com:amergey/quartz.git</connection>
+    <developerConnection>scm:git:git@github.com:amergey/quartz.git</developerConnection>
+    <tag/>
+    <url>https://github.com/amergey/quartz</url>
   </scm>
   <issueManagement>
     <system>Terracotta's JIRA</system>
-    <url>https://github.com/quartz-scheduler/quartz/issues</url>
+    <url>https://github.com/amergey/quartz/issues</url>
   </issueManagement>  
   <developers>
     <developer>
@@ -62,8 +62,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
 
     <skipDeploy>false</skipDeploy>
     <skipJavadoc>false</skipJavadoc>
@@ -78,9 +78,8 @@
     <checkstyle-config-file>${user.dir}/checkstyle/src/main/resources/checkstyle.xml</checkstyle-config-file>
     <checkstyle-header-file>${user.dir}/checkstyle/src/main/resources/header.txt</checkstyle-header-file>
 
-    <terracotta-snapshots-url>http://nexus.terracotta.eur.ad.sag/content/repositories/terracotta-snapshots</terracotta-snapshots-url>
-    <terracotta-staging-url>http://nexus.terracotta.eur.ad.sag/content/repositories/terracotta-staging</terracotta-staging-url>
-    <terracotta-releases-url>http://nexus.terracotta.eur.ad.sag/content/repositories/terracotta-releases</terracotta-releases-url>
+    <terracotta-snapshots-url>https://maven.pkg.github.com/amergey/quartz</terracotta-snapshots-url>
+    <terracotta-releases-url>https://maven.pkg.github.com/amergey/quartz</terracotta-releases-url>
   </properties>
 
   <build>
@@ -243,7 +242,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>2.4.1</version>
+          <version>3.1.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -315,37 +314,6 @@
         <module>distribution</module>
       </modules>
     </profile>
-    <profile>
-      <!-- Profile to sign artifacts with a PGP key (using GPG). -->
-      <id>sign-artifacts</id>
-      <activation>
-        <property>
-          <name>performRelease</name>
-          <value>true</value>
-        </property>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.4</version>
-            <executions>
-              <execution>
-                <id>sign-artifacts</id>
-                <phase>verify</phase>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-                <configuration>
-                  <keyname>Terracotta Release Engineer</keyname>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
 
     <profile>
       <id>deploy-sonatype</id>
@@ -390,11 +358,6 @@
   </profiles>  
 
   <distributionManagement>
-    <repository>
-      <id>terracotta-staging</id>
-      <name>Terracotta Staging Repository</name>
-      <url>${terracotta-staging-url}</url>
-    </repository>
     <snapshotRepository>
       <id>terracotta-snapshots</id>
       <uniqueVersion>false</uniqueVersion>
@@ -406,14 +369,14 @@
   <repositories>
     <repository>
       <id>terracotta-snapshots</id>
-      <url>https://snapshots.terracotta.org/</url>
+      <url>https://maven.pkg.github.com/amergey/quartz</url>
       <releases>
         <enabled>false</enabled>
       </releases>
     </repository>
     <repository>
       <id>terracotta-releases</id>
-      <url>https://repo.terracotta.org/maven2</url>
+      <url>https://maven.pkg.github.com/amergey/quartz</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
@@ -423,14 +386,14 @@
   <pluginRepositories>
     <pluginRepository>
       <id>terracotta-snapshots</id>
-      <url>https://snapshots.terracotta.org/</url>
+      <url>https://maven.pkg.github.com/amergey/quartz</url>
       <releases>
         <enabled>false</enabled>
       </releases>
     </pluginRepository>
     <pluginRepository>
       <id>terracotta-releases</id>
-      <url>https://repo.terracotta.org/maven2</url>
+      <url>https://maven.pkg.github.com/amergey/quartz</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
