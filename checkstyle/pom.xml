@@ -14,8 +14,8 @@
   <packaging>jar</packaging>
 
   <properties>
-    <terracotta-snapshots-url>https://maven.pkg.github.com/amergey/quartz</terracotta-snapshots-url>
-    <terracotta-releases-url>https://maven.pkg.github.com/amergey/quartz</terracotta-releases-url>      
+    <terracotta-snapshots-url>http://sem-nexus.westeurope.azurecontainer.io:8081/repository/semarchy-oss</terracotta-snapshots-url>
+    <terracotta-releases-url>http://sem-nexus.westeurope.azurecontainer.io:8081/repository/semarchy-oss</terracotta-releases-url>      
   </properties>
 
   <profiles>

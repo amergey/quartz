@@ -210,7 +210,7 @@
             commonj.work;resolution:=optional,
             org.quartz.jobs;resolution:=optional,
             com.mchange.v2.c3p0;resolution:=optional,
-            com.zaxxer.hikari:=optional,
+            com.zaxxer.hikari;resolution:=optional,
             *
             </Import-Package>
             <Export-Package>org.quartz.*</Export-Package>
